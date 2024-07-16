@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Blog de videojuegos</title>
 </head>
 <body>
     <!-- CABECERA -->
-    <header id="header">
+    <header id="cabecera">
         <div id="logo">
             <a href="">
                 Blog de Videojuegos
@@ -16,7 +17,7 @@
         </div>
 
             <!-- MENU -->
-        <nav id="nav">
+        <nav id="menu">
             <ul>
                 <li>
                     <a href="index.php">Inicio</a>
@@ -41,12 +42,14 @@
                 </li>
             </ul>
         </nav>
+
+        <div class="clearfix"></div>
     </header>
    
-    <div id="container">
+    <div id="contenedor">
         <!-- BARRA LATERAL -->
         <aside id="sidebar">
-            <div id="login" class="block-aside">
+            <div id="login" class="bloque">
                 <h3>Identificate</h3>
                 <form action="login.php" method="POST">
                     <label for="email">Email</label>
@@ -60,7 +63,7 @@
                 </form>
             </div>
 
-            <div id="register" class="block-aside">
+            <div id="register" class="bloque">
                 <h3>Registrate</h3>
                 <form action="registro.php" method="POST">
                     <label for="nombre">Nombre</label>
@@ -85,36 +88,48 @@
         <div id="principal">
             <h1>Ultimas entradas</h1>
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Alias corporis mollitia officia obcaecati eligendi illum accusamus 
-                    aspernatur? Recusandae, beatae perferendis.</p>                
+                <a href="">
+                    <h2>Titulo de mi entrada</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Alias corporis mollitia officia obcaecati eligendi illum accusamus 
+                        aspernatur? Recusandae, beatae perferendis.</p>            
+                </a>    
             </article>
 
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Alias corporis mollitia officia obcaecati eligendi illum accusamus 
-                    aspernatur? Recusandae, beatae perferendis.</p>                
+                <a href="">
+                    <h2>Titulo de mi entrada</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Alias corporis mollitia officia obcaecati eligendi illum accusamus 
+                        aspernatur? Recusandae, beatae perferendis.</p>            
+                </a>    
             </article>
 
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Alias corporis mollitia officia obcaecati eligendi illum accusamus 
-                    aspernatur? Recusandae, beatae perferendis.</p>                
+                <a href="">
+                    <h2>Titulo de mi entrada</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Alias corporis mollitia officia obcaecati eligendi illum accusamus 
+                        aspernatur? Recusandae, beatae perferendis.</p>            
+                </a>    
             </article>
 
             <article class="entrada">
-                <h2>Titulo de mi entrada</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Alias corporis mollitia officia obcaecati eligendi illum accusamus 
-                    aspernatur? Recusandae, beatae perferendis.</p>                
+                <a href="">
+                    <h2>Titulo de mi entrada</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Alias corporis mollitia officia obcaecati eligendi illum accusamus 
+                        aspernatur? Recusandae, beatae perferendis.</p>            
+                </a>    
             </article>
-        </div>
+            <div id="ver-todas">
+                <a href="">Ver todas las entradas</a>
+            </div>
+        </div>        
+        <div class="clearfix"></div>
     </div>
     <!-- PIE DE PAGINA -->
-    <footer id="footer">
+    <footer id="pie">
         <p>Desarrollado por Jose Luis Baena &copy; 2024</p>
     </footer>
 </body>
