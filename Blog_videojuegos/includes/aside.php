@@ -15,6 +15,9 @@
             </div>
 
             <div id="register" class="bloque">
+                <?php if (isset($_SESSION['errores'])) : ?>
+                    <?php var_dump($_SESSION['errores']); ?>
+                <?php endif; ?>
                 <h3>Registrate</h3>
                 <form action="registro.php" method="POST">
                     <label for="nombre">Nombre</label>
@@ -29,7 +32,7 @@
                     <label for="password">Contraseña</label>
                     <input type="password" name="password">
 
-                    <input type="submit" value="Registrar">
+                    <input type="submit" name="submit" value="Registrar">
 
                 </form>
             </div>
