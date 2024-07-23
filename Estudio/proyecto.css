@@ -1,0 +1,164 @@
+/*** Estilos Menu Fullscreen Móvil ***/
+body .ov-menu-movil-fullscreen .opened .et_mobile_menu,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .opened .et_mobile_menu {
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  padding: 0;
+  overflow-y: auto;
+}
+body .ov-menu-movil-fullscreen .closed .et_mobile_menu,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .closed .et_mobile_menu {
+  text-align: center;
+  width: 100vw;
+  position: fixed;
+  left: 100vw;
+  top: 0px;
+  height: 100vh !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: visibility 0.3s, opacity 0.3s, left 1s, ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+body
+  .ov-menu-movil-fullscreen
+  .et_mobile_menu
+  li
+  .et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .et_mobile_menu
+  li {
+  list-style: none !important;
+  text-align: center !important;
+  width: 100%;
+  padding-left: 0 !important;
+}
+body .ov-menu-movil-fullscreen .et_mobile_menu li .sub-menu,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .et_mobile_menu li .sub-menu {
+  padding-left: 0 !important;
+}
+body .ov-menu-movil-fullscreen .et_pb_menu__wrap span.mobile_menu_bar,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .et_pb_menu__wrap
+  span.mobile_menu_bar {
+  z-index: 999999 !important;
+}
+body
+  .ov-menu-movil-fullscreen
+  .et_pb_menu__wrap
+  .opened
+  .mobile_menu_bar:before,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .et_pb_menu__wrap
+  .opened
+  .mobile_menu_bar:before {
+  content: "\4d" !important;
+}
+body .ov-menu-movil-fullscreen .opened .mobile_menu_bar,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .opened .mobile_menu_bar {
+  /*position: fixed !important;
+  top: 20px;
+  right: 20px;*/
+  top: 2px;
+  right: 2px;
+}
+body .ov-menu-movil-fullscreen .et_mobile_menu,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .et_mobile_menu {
+  border-top: none;
+}
+body .ov-menu-movil-fullscreen .et_mobile_menu .menu-item-has-children > a,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .et_mobile_menu
+  .menu-item-has-children
+  > a {
+  background-color: transparent;
+}
+body .et_mobile_menu li a:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+body .ov-menu-movil-fullscreen .et_mobile_menu li a,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .et_mobile_menu li a {
+  border-bottom: none;
+}
+
+/* Estilos Menu Colapsado Movil */
+body .ov-menu-movil-fullscreen .mobile_nav li ul.hide,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .mobile_nav li ul.hide {
+  display: none !important;
+}
+body .ov-menu-movil-fullscreen .mobile_nav .menu-item-has-children,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .mobile_nav
+  .menu-item-has-children {
+  position: relative;
+}
+body .ov-menu-movil-fullscreen .mobile_nav .menu-item-has-children > a,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .mobile_nav
+  .menu-item-has-children
+  > a {
+  background: transparent;
+}
+body .ov-menu-movil-fullscreen .mobile_nav .menu-item-has-children > a + span,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .mobile_nav
+  .menu-item-has-children
+  > a
+  + span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 3;
+}
+body .ov-menu-movil-fullscreen span.menu-closed:before,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen span.menu-closed:before {
+  content: "\4c";
+  display: block;
+  color: #000;
+  font-size: 18px;
+  font-family: ETmodules;
+}
+body .ov-menu-movil-fullscreen span.menu-closed.menu-open:before,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  span.menu-closed.menu-open:before {
+  content: "\4d";
+}
