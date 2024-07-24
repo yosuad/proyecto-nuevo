@@ -1,0 +1,84 @@
+/*** Estilos Menu Fullscreen Móvil ***/
+
+body
+  .ov-menu-movil-fullscreen
+  .et_pb_menu__wrap
+  .opened
+  .mobile_menu_bar:before,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .et_pb_menu__wrap
+  .opened
+  .mobile_menu_bar:before {
+  content: "\4d" !important;
+}
+
+body .et_mobile_menu li a:hover {
+  background-color: transparent;
+  opacity: 1;
+}
+body .ov-menu-movil-fullscreen .et_mobile_menu li a,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .et_mobile_menu li a {
+  border-bottom: none;
+}
+
+/* Estilos Menu Colapsado Movil */
+body .ov-menu-movil-fullscreen .mobile_nav li ul.hide,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen .mobile_nav li ul.hide {
+  display: none !important;
+}
+body .ov-menu-movil-fullscreen .mobile_nav .menu-item-has-children,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .mobile_nav
+  .menu-item-has-children {
+  position: relative;
+}
+body .ov-menu-movil-fullscreen .mobile_nav .menu-item-has-children > a,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .mobile_nav
+  .menu-item-has-children
+  > a {
+  background: transparent;
+}
+body .ov-menu-movil-fullscreen .mobile_nav .menu-item-has-children > a + span,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  .mobile_nav
+  .menu-item-has-children
+  > a
+  + span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 3;
+}
+body .ov-menu-movil-fullscreen span.menu-closed:before,
+.et-db #et-boc .et-l .ov-menu-movil-fullscreen span.menu-closed:before {
+  content: "\4c";
+  display: block;
+  color: #000;
+  font-size: 18px;
+  font-family: ETmodules;
+}
+body .ov-menu-movil-fullscreen span.menu-closed.menu-open:before,
+.et-db
+  #et-boc
+  .et-l
+  .ov-menu-movil-fullscreen
+  span.menu-closed.menu-open:before {
+  content: "\4d";
+}
