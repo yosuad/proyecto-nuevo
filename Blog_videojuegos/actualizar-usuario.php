@@ -37,27 +37,35 @@ if(isset($_POST)){
      // VALIDAR QUE NO TENGA ERRORES
      $guardar_usuario = false;
      if (count($errores) == 0) {
-        $guardar_usuario = true;
-          
-
-        // ACTUALIZAR USUARIOS EN LA BASE DE DATOS
         $usuario = $_SESSION['usuario'];
-
-        $sql = "UPDATE usuarios SET ".
-                "nombre = '$nombre', ".
-                "apellidos = '$apellidos', ".
-                "email = '$email' ".
-                "WHERE id = ".$usuario['id'];
-        $guardar = mysqli_query($db, $sql);
-
+        $guardar_usuario = true;
         
-        if($guardar) {
-            $_SESSION['usuario']['nombre'] = $nombre;
-            $_SESSION['usuario']['apellidos'] = $apellidos;
-            $_SESSION['usuario']['email'] = $email;
-            $_SESSION['completado'] = "Tus datos se han actualizado con Éxito";
+        // COMPROBAR SI EL EMAIL YA EXISTE
+        $sql = "SELECT id, email FROM usuarios WHERE email = '$email'";
+        $isset_email = mysqli_query($db, $sql);
+        $isset_user = mysqli_fetch_assoc($isset_email);
+
+        if ($isset_user['id'] == $usuario['id'] || empty($isset_user)) {
+           
+            // ACTUALIZAR USUARIOS EN LA BASE DE DATOS            
+            $sql = "UPDATE usuarios SET ".
+                    "nombre = '$nombre', ".
+                    "apellidos = '$apellidos', ".
+                    "email = '$email' ".
+                    "WHERE id = ".$usuario['id'];
+            $guardar = mysqli_query($db, $sql);
+
+            
+            if($guardar) {
+                $_SESSION['usuario']['nombre'] = $nombre;
+                $_SESSION['usuario']['apellidos'] = $apellidos;
+                $_SESSION['usuario']['email'] = $email;
+                $_SESSION['completado'] = "Tus datos se han actualizado con Éxito";
+            }else{
+                $_SESSION['errores']['general'] = "Fallo al actualizar tus datos!!";
+            }
         }else{
-            $_SESSION['errores']['general'] = "Fallo al actualizar tus datos!!";
+            $_SESSION['errores']['general'] = "El usuario ya existe!!";
         }
 
      } else {
