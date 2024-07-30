@@ -27,7 +27,6 @@
                     <a href="index.php">Inicio</a>
                 </li>
 
-
                     <?php 
                         $categorias = conseguirCategorias($db);
                         if($categorias && mysqli_num_rows($categorias) > 0) : 
@@ -41,7 +40,7 @@
 
 
                 <li>
-                    <a href="index.php">sobre mí</a>
+                    <a href="sobremi.php">sobre mí</a>
                 </li>
                 <li>
                     <a href="index.php">contacto</a>
