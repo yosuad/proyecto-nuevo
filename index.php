@@ -1,7 +1,34 @@
 <?php
+require_once("Config/Config.php");
+require_once("Helpers/Helpers.php");
 
-require_once "controladores/plantilla.controlador.php";
-require_once "controladores/ruta.controlador.php";
+$url = !empty($_GET['url']) ? $_GET['url'] : "home/home";
+// separa un strim cuando encuentre el caracter, en este caso el /
+$arrUrl = explode("/", $url);
+// asignar controlador
+$controller = $arrUrl[0];
+// asignar metodo
+$method = $arrUrl[0];
+//definir parametros
+$params = "";
 
-$plantilla = new ControladorPlantilla();
-$plantilla -> ctrPlantilla();
+if (!empty($arrUrl[1])) {
+    if ($arrUrl[1] != "") {
+        $method = $arrUrl[1];
+    }
+}
+
+if (!empty($arrUrl[2])) {
+    if ($arrUrl[2] != "") {
+        for ($i = 2; $i < count($arrUrl); $i++) {
+            // asignar parametros y concatenar la ,
+            $params .= $arrUrl[$i] . ',';
+        }
+        // eliminar ultima ,
+        $params = trim($params, ',');
+    }
+}
+
+// CARGAR AUTOLOAD PARA CARGAR CLASES
+require_once("Libraries/core/Autoload.php");
+require_once("Libraries/core/Load.php");
