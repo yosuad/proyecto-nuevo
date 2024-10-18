@@ -5,11 +5,23 @@ function base_url()
 {
     return BASE_URL;
 }
+// RETORNAR LA URL DE ASSETS
 function media()
 {
     return BASE_URL . "/Assets";
 }
 
+// REQUERIR TEMPLATES DE DASBOARD ADMIN
+function headerAdmin($data = "")
+{
+    $view_header = "Views/Template/header_admin.php";
+    require_once $view_header;
+}
+function footerAdmin($data = "")
+{
+    $view_footer = "Views/Template/footer_admin.php";
+    require_once $view_footer;
+}
 //Muestra información formateada
 function dep($data)
 {
