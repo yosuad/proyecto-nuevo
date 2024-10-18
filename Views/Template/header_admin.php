@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="wiquiweb">
     <meta name="theme-color" content="#009688">
-    <meta rel="shortcut icon" href="<?= media(); ?>/images/favicon.ico">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="<?= media(); ?>/images/favicon.ico">
     <title><?= $data['page_tag'] ?></title>
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="<?= media(); ?>/css/main.css">
